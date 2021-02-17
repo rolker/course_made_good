@@ -49,9 +49,9 @@ int main(int argc, char **argv)
     
     last_position[0] = 9999;
     
-    ros::Subscriber input = n.subscribe("/position",10,&positionCallback);
+    ros::Subscriber input = n.subscribe("position",10,&positionCallback);
     
-    cmg_pub = n.advertise<marine_msgs::CourseMadeGoodStamped>("/cmg",1);
+    cmg_pub = n.advertise<marine_msgs::CourseMadeGoodStamped>("cmg",1);
     ros::spin();
     
     return 0;
